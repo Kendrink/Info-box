@@ -40,13 +40,34 @@ const InquirerQuestions = [
             message: 'what are the features of this app?',
             name: 'features',
           },
+          {
+            type: 'input',
+            name: 'githubUsername',
+            message: 'What is your GitHub username?',
+        },
+        {
+            type: 'input',
+            name: 'linkedin',
+            message: 'What is your linkedin username?',
+        },
       ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(file, data) {
+    fs.writeFile('readME', 'generateMarkdown', (error, data) =>
+  error ? console.error(error) : console.log(data)
+);
+}
+
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(InquirerQuestions)
+    .then((data) => generateMarkdown(data));
+        
+}
 
 // Function call to initialize app
 init();
+
+
