@@ -50,6 +50,22 @@ const InquirerQuestions = [
             name: 'linkedin',
             message: 'What is your linkedin username?',
         },
+
+        {
+            type: "list",
+            name: "licensecategory",
+            message: "pick a license",
+            choices: 
+            [
+            "Eclipse Public License 1.0",
+            "GNU GPL v3",
+            "GNU GPL v2",
+            "GNU AGPL v3",
+            "GNU LGPL v3",
+            "GNU FDL v1.3",
+           
+        ]
+        },
       ];
 
 // TODO: Create a function to write README file
